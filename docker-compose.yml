@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:15
+    hostname: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: "live_coding_challenge"
+      POSTGRES_USER: "api_access_user"
+      POSTGRES_PASSWORD: "I_am_quite_a_strong_password!"
+    volumes:
+      - "./db:/docker-entrypoint-initdb.d"
+    ports:
+      - "5432:5432"
+  api:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DB_HOST_NAME: postgres
+    ports:
+      - 3000
