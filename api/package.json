@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "private": true,
+  "version": "1.0.0",
+  "description": "API for DevOps live Coding Challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "author": "IMMO Investment Technologies",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "jest": "29.4.0"
+  },
+  "dependencies": {
+    "knex": "^2.4.2",
+    "pg": "^8.9.0"
+  }
+}
