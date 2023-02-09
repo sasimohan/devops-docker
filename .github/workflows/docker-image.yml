@@ -1,4 +1,4 @@
-name: Deploy container and Test the application
+name: Deploy container and Test the application 1
 
 on:
   push:

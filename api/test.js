@@ -47,6 +47,21 @@ test('get_user_with_tweets(user_b) returns user_b with their tweets', async () =
   expect(user_with_tweets).toMatchObject(expected_subset);
 });
 
+// test('get_user_with_tweets(user_d) returns user_d with their tweets', async () => {
+//   const expected_subset = {
+//     'data': [
+//       {
+//         status: 'false',
+//       },
+//       {
+//         message: 'User with username user_d not found',
+//       }
+//     ],
+//   };
+//   const user_with_tweets = await get_user_with_tweets('user_d');
+//   expect(user_with_tweets).toMatchObject(expected_subset);
+// })
+
 test('get_user_with_tweets(user_c) returns user_c with their tweets', async () => {
   // Pre-populated - this expectation is definitely correct
   const expected_subset = {
